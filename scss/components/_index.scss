@@ -1,0 +1,580 @@
+@use "../utilities/variables";
+
+// Hero Section
+.aprende-ingles {
+    background-image: url("../../assets/img/serpientes/serpiente-accent-200-alt.svg");
+    background-repeat: no-repeat;
+    background-position: center -180px;
+    background-color: variables.$Primary-Accent-700;
+    border-radius: 40px;
+    padding: 80px 120px;
+    display: flex;
+    justify-content: center;
+
+   .aprende-ingles-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+    }
+    
+    .aprende-ingles-title {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: variables.$Primary-Brand-700;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            span {
+                font-size: 0.875rem;
+                color: variables.$Primary-Brand-700;
+                padding: 12px;
+                border-radius: 80px;
+                border: 0.5px solid variables.$Primary-Accent-100;
+                background-color: variables.$Primary-Accent-50;
+            }
+        }
+        .span-bottom {
+            align-items: flex-start;
+        }
+    }
+
+    .aprende-ingles-description {
+        padding-top: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+
+        p {
+            font-size: 1.125rem;
+            line-height: 20px;
+            color: variables.$Primary-Brand-700;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .description-buttons-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            max-width: 560px;
+            width: 100%;
+
+            .description-button {
+                padding: 16px 48px;
+                border-radius: 80px;
+                background-color: variables.$Primary-Brand-700;
+                font-size: 1.125rem;
+                color: #FFFFFF;
+                text-decoration: none;
+                display: block;
+                align-self: stretch;
+                text-align: center;
+                &:hover {
+                    background-color: variables.$Primary-Brand-800;
+                }
+            }
+            .programs-button {
+                padding: 16px;
+                font-size: 1.125rem;
+                color: variables.$Primary-Brand-700;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+// Programs Section
+.programas {
+    background-color: variables.$Neutrals-Neutral-Alt;
+    padding: 120px 56px;
+    border-radius: 40px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    
+    .programas-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .programas-title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            color: variables.$Neutrals-Neutral-900;
+        }
+        .all-programs {
+            border-radius: 80px;
+            border: 2px solid variables.$Primary-Brand-700;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: variables.$Primary-Brand-700;
+            text-decoration: none;
+            &:hover {
+                background-color: variables.$Primary-Brand-50;
+            }
+        }
+    }
+    .programas-cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        .programas-card{
+            display: flex;
+            padding: 80px 16px 16px 16px;
+            border-radius: 24px;
+            flex: 1 0 0;
+            align-self: stretch;
+            max-width: 405px;
+            min-width: 352px;
+            height: 364px;
+        }
+        .programa-flow {
+            background-color: variables.$Primary-Brand-700;
+        }
+        .programas-card-flow {
+            border-radius: 20px;
+            padding: 24px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+
+            .programa-tag-container {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+                .programa-tag{
+                    padding: 12px;
+                    border-radius: 80px;
+                    border: 0.5px solid variables.$Primary-Brand-700;
+                    background-color: variables.$Primary-Accent-50;
+                    font-size: 0.875rem;
+                    line-height: 16px;
+                    color: variables.$Primary-Brand-700;
+                }
+            }
+            .programa-details-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+                align-items: flex-start;
+                .programa-details-wrapper {
+                    h4 {
+                        font-size: 2rem;
+                        font-weight: 700px;
+                        color: variables.$Primary-Brand-700;
+                    }
+                    p {
+                        margin-top: 8px;
+                        margin-bottom: 24px;
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        line-height: 28px;
+                        color: variables.$Primary-Brand-700;
+                    }
+                }
+                .programa-details {
+                    display: inline-block;
+                    padding: 12px 24px;
+                    border-radius: 80px;
+                    background-color: variables.$Primary-Brand-700;
+                    font-size: 1rem;
+                    color: #FFFFFF;
+                    &:hover {
+                        background-color: variables.$Primary-Brand-800;
+                    }
+                }
+            }
+        }
+        
+        .programa-kids {
+            background-color: variables.$Secondary-Green-500;
+            .programas-card-kids {
+                @extend .programas-card-flow;
+                .programa-tag-container {
+                    .programa-tag {
+                        border: 0.5px solid variables.$Secondary-Green-200;
+                        background-color: variables.$Secondary-Green-50;
+                        color: variables.$Secondary-Green-900;
+                    }
+                }
+                .programa-details-container {
+                    .programa-details-wrapper {
+                        h4 {
+                            color: variables.$Secondary-Green-900;
+                        }
+                        p {
+                            color: variables.$Secondary-Green-900;
+                        }
+                    }
+                    .programa-details {
+                        background-color: variables.$Secondary-Green-900;
+                        &:hover {
+                            background-color: variables.$Secondary-Green-700;
+                        }
+                    }
+                }
+            }
+        }
+        .programa-flash {
+            background-color: variables.$Primary-Accent-700;
+            .programas-card-flash {
+                @extend .programas-card-flow;
+                .programa-tag-container {
+                    .programa-tag {
+                        border: 0.5px solid variables.$Primary-Accent-100;
+                        background-color: variables.$Primary-Accent-50;
+                        color: variables.$Primary-Brand-700;
+                    }
+                }
+                .programa-details-container {
+                    .programa-details-wrapper {
+                        h4 {
+                            color: variables.$Primary-Brand-700;
+                        }
+                        p {
+                            color: variables.$Primary-Brand-700;
+                        }
+                    }
+                    .programa-details {
+                        background-color: variables.$Primary-Brand-700;
+                        &:hover {
+                            background-color: variables.$Primary-Brand-800;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Como Funciona Section
+.como-funciona {
+    background-image: url(../../assets/img/serpientes/serpiente-brand-200.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: variables.$Primary-Brand-700;
+    border-radius: 40px;
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .como-funciona-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        
+        h2 {
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .pasos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+
+            .pasos-container-1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 16px;
+            }
+            .pasos-container-2 {
+                @extend .pasos-container-1;
+                justify-content: flex-end;
+            }
+        }
+        .pasos-card-container {
+            padding: 80px 16px 16px 16px;
+            width: 100%;
+            max-width: 438px;
+            border-radius: 24px;
+            background-color: variables.$Neutrals-Neutral-Alt;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .pasos-card {
+                background-color: variables.$Primary-Accent-100;
+                border-radius: 20px;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                flex: 1 0 0;
+                align-items: flex-start;
+
+                .paso-tag {
+                    color: #FFFFFF;
+                    padding: 12px;
+                    border-radius: 80px;
+                    background-color: variables.$Primary-Brand-700;
+                }
+                .pasos-details {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    h4 {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: variables.$Primary-Brand-700;
+                    }
+                    p {
+                        font-size: 1.125rem;
+                        color: variables.$Primary-Brand-700;
+                        padding-bottom: 24px;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Por qué elegirnos section
+.porque-elegirnos {
+    background-color: variables.$Primary-Accent-700;
+    padding: 120px 56px;
+    border-radius: 40px;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .porque-elegirnos-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+
+        .porque-elegirnos-title {
+            align-self: flex-start;
+            h2{
+                color: variables.$Neutrals-Neutral-900;
+                margin-bottom: 8px;
+            }
+            p {
+                font-size: 1.125rem;
+                line-height: 28px;
+                color: variables.$Neutrals-Neutral-900;
+            }
+        }
+        .motivos-container {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+                "motivo-1 motivo-1 motivo-1 motivo-1 motivo-1 motivo-1 motivo-1 motivo-2 motivo-2 motivo-2 motivo-2 motivo-2"
+                "motivo-3 motivo-3 motivo-3 motivo-3 motivo-3 motivo-4 motivo-4 motivo-4 motivo-4 motivo-4 motivo-4 motivo-4";
+            
+            .motivos-card {
+                padding: 24px;
+                border-radius: 24px;
+                background-color: variables.$Neutrals-Neutral-Alt;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+                // flex: 1 0 0;
+
+                .motivos-img-container {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .motivos-detail {
+                    h4 {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 36px;
+                        color: variables.$Neutrals-Neutral-900;
+                    }
+                    p {
+                        margin-top: 4px;
+                        margin-bottom: 24px;
+                        font-size: 1.125rem;
+                        line-height: 28px;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }    
+        }
+        .motivo-1{
+            grid-area: motivo-1;
+        }
+        .motivo-2{
+            grid-area: motivo-2;
+        }
+        .motivo-3{
+            grid-area: motivo-3;
+        }
+        .motivo-4{
+            grid-area: motivo-4;
+        }
+    }
+}
+
+// Dudas section -- En el partial accordeon
+
+// Opiniones Section
+.opiniones {
+    background-image: url("../../assets/img/serpientes/serpiente-orange-50.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    padding: 120px 56px;
+    border-radius: 40px;
+    background-color: variables.$Neutrals-Neutral-Alt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .opiniones-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+
+        .opiniones-title {
+            display: flex;
+            flex-direction: column;
+            span {
+                align-self: flex-end;
+                padding: 12px;
+                border-radius: 80px;
+                border: 0.5px solid variables.$Secondary-Orange-500;
+                color: variables.$Secondary-Orange-900;
+                transform: rotate(3.938deg);
+                margin-bottom: -10px;
+                background-color: #FFFFFF;
+            }
+        }
+        .opiniones-container {
+            position: relative;
+            width: 1200px;
+            height: 640px;
+            .opiniones-card {
+                position: absolute;
+                padding: 40px;
+                width: 336px;
+                border-radius: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+
+                h4 {
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    line-height: 28px;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 24px;
+                    margin-top: 8px;
+                }
+                h5 {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+                &-1 {
+                    top: 15.4px;
+                    left: 0;
+                    background-color: variables.$Secondary-Green-500;
+                    z-index: 50;
+                    h4, p, h5 {
+                        color: variables.$Secondary-Green-900;
+                    }
+                }
+                &-2 {
+                    top: 108px;
+                    left: 389px;
+                    background-color: variables.$Secondary-Orange-500;
+                    transform: rotate(0.387deg);
+                    z-index: 200;
+                    h4, p, h5 {
+                        color: variables.$Secondary-Orange-900;
+                    }
+                }
+                &-3 {
+                    top: 0;
+                    right: 0;
+                    background-color: variables.$Primary-Accent-700;
+                    z-index: 150;
+                    transform: rotate(-1.021deg);
+                    h4, p, h5 {
+                        color: variables.$Neutrals-Neutral-900;
+                    }
+                }
+                &-4 {
+                    left: 84.2px;
+                    bottom: 0;
+                    background-color: variables.$Primary-Accent-700;
+                    transform: rotate(-2.53deg);
+                    z-index: 100;
+                    h4, p, h5 {
+                        color: variables.$Neutrals-Neutral-900;
+                    }
+                }
+                &-5 {
+                    right: 109px;
+                    bottom: 24.1px;
+                    background-color: variables.$Secondary-Green-500;
+                    transform: rotate(-1.937deg);
+                    z-index: 250;
+                    h4, p, h5 {
+                        color: variables.$Secondary-Green-900;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,200 @@
+@use "../utilities/variables";
+@use "./inglesParaNegocios";
+
+.en-hero {
+    background-image: url("../../assets/img/serpientes/serpiente-accent-200-alt.svg");
+    background-repeat: no-repeat;
+    // background-size: clamp(100%, 100%, 1440px);
+    background-position: center -180px;
+    padding: 120px;
+    border-radius: 40px;
+    background-color: variables.$Primary-Accent-700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .en-hero-wrapper {
+        max-width: 1440px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        span {
+            padding: 12px;
+            border-radius: 80px;
+            border: 0.5px solid variables.$Primary-Accent-100;
+            background-color: variables.$Primary-Accent-50;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 16px;
+            color: variables.$Primary-Brand-700;
+        }
+        .en-title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            text-align: center;
+            h1 {
+                font-size: 4.5rem;
+                font-weight: 700;
+                line-height: 86px;
+                color: variables.$Primary-Brand-700;
+            }
+            p {
+                color: variables.$Primary-Brand-700;
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 28px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+// Historia Section
+.historia {
+    margin: 24px 0px;
+    padding: 80px 56px;
+    border-radius: 40px;
+    background-color: variables.$Primary-Brand-700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .historia-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 80px;
+
+        .historia-details-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            h2 {
+                color: #FFFFFF;
+            }
+            p {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 28px;
+                color: #FFFFFF;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+        .historia-image-container {
+            width: 50%;
+            max-width: 622px;
+            background-color: variables.$Neutrals-Neutral-Alt;
+            border-radius: 24px;
+            padding: 16px 16px 80px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+// Filosofia Section
+.filosofia {
+    background-image: url("../../assets/img/serpientes/serpiente-accent-200.svg");
+    background-repeat: no-repeat;
+    // background-size: clamp(100%, 100%, 1440px);
+    background-position: center;
+    padding: 80px 56px;
+    border-radius: 40px;
+    background-color: variables.$Neutrals-Neutral-Alt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @extend .incluye-info-container;
+
+    .filosofia-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+
+        .filosofia-title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            span {
+                padding: 12px;
+                background-color: #FFFFFF;
+                border-radius: 80px;
+                border: 0.5px solid variables.$Secondary-Orange-500;
+                font-size: 0.875rem;
+                font-weight: 500;
+                line-height: 16px;
+                color: variables.$Secondary-Orange-900;
+            }
+            h2 {
+                columns: variables.$Neutrals-Neutral-900;
+            }
+        }
+    }
+}
+
+// Camino Section
+.camino {
+    margin-top: 24px;
+    padding: 40px;
+    background-color: variables.$Primary-Accent-700;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .camino-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 40px;
+
+        .camino-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            color: variables.$Primary-Brand-700;
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 36px;
+            }
+            p {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 28px;
+            }
+        }
+        .camino-button {
+            display: inline-block;
+            width: -webkit-fill-available;
+            max-width: fit-content;
+            padding: 16px 48px;
+            border-radius: 80px;
+            border: 2px solid variables.$Primary-Brand-700;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 28px;
+            color: variables.$Primary-Brand-700;
+        }
+    }
+}

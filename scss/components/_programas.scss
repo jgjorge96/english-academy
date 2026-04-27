@@ -1,0 +1,92 @@
+@use "../utilities/variables";
+@use "./index";
+
+.programas-main {
+    background-image: url("../../assets/img/serpientes/serpiente-brand-200-alt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+    @extend.programas;
+    margin: 0px 0px 24px 0px;
+    background-color: variables.$Primary-Brand-700;
+    .programas-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        .programas-title {
+            flex-direction: column;
+            gap: 8px;
+            h1 {
+                font-size: 72px;
+                font-weight: 700;
+                line-height: 80px;
+                color: #FFFFFF;
+            }
+            p {
+                color: #FFFFFF;
+                font-size: 1.125rem;
+                line-height: 28px;
+                font-weight: 500;
+            }
+            span {
+                padding: 12px;
+                border-radius: 80px;
+                border: 1px solid #FFFFFF;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                color: #FFFFFF;
+                background-color: variables.$Primary-Brand-200;
+            }
+        }
+        .programas-cards-container {
+            .programas-card {
+                background-color: variables.$Neutrals-Neutral-Alt;
+                .programas-card-flow {
+                    background-color: variables.$Primary-Brand-50;
+                    .programa-tag {
+                        background-color: #FFFFFF;
+                    }
+                }
+                .programas-card-kids {
+                    background-color: variables.$Secondary-Green-200;
+                    .programa-tag {
+                        border: 0.5px solid variables.$Secondary-Green-500;
+                        background-color: #FFFFFF;
+                    }
+                }
+                .programas-card-flash {
+                    background-color: variables.$Primary-Accent-100;
+                    .programa-tag {
+                        border: 0.5px solid variables.$Primary-Accent-700;
+                        background-color: #FFFFFF;
+                    }
+                }
+                .card-ielts {
+                    background-color: variables.$Secondary-Orange-50;
+                    .programa-tag {
+                        background-color: #FFFFFF;
+                        border: 0.5px solid variables.$Secondary-Orange-500;
+                        color: variables.$Secondary-Orange-900;
+                    }
+                    .programa-details-container {
+                        .programa-details-wrapper {
+                            h4, p {
+                                color: variables.$Secondary-Orange-900;
+                            }
+                        }
+                        .programa-details {
+                            background-color: variables.$Secondary-Orange-900;
+                            &:hover {
+                                background-color: variables.$Secondary-Orange-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

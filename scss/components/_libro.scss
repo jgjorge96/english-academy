@@ -1,0 +1,401 @@
+@use "../utilities/variables";
+@use "./sobreEnglisNetwork";
+@use "./index";
+
+// Hero Section
+.libro-hero {
+    background-color: variables.$Primary-Brand-700;
+    padding: 80px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .libro-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 80px;
+        flex: 1 0 0;
+
+        .libro-details-container {
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 48px;
+
+            .libro-details-description {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+
+                .libro-details-title {
+                    span {
+                        display: inline-block;
+                        border-radius: 80px;
+                        border: 1px solid #FFFFFF;
+                        padding: 12px;
+                        background-color: variables.$Primary-Brand-200;
+                        font-size: 0.875rem;
+                        color: #FFFFFF;
+                        font-weight: 500;
+                        line-height: 16px;
+                    }
+                    h1 {
+                        font-size: 4.5rem;
+                        font-weight: 700;
+                        line-height: 86px;
+                        color: #FFFFFF;
+                        margin-top: 8px;
+                    }
+                }
+                p {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                    span {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .libro-details-contact {
+            display: inline-block;
+            width: -webkit-fill-available;
+            max-width: 484px;
+            padding: 16px 48px;
+            border-radius: 80px;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 28px;
+            color: variables.$Primary-Brand-700;
+        }
+        // .libro-image-container abajo para extender
+    }
+}
+// Para extender
+.libro-image-container {
+    width: 50%;
+    max-width: 622px;
+    background-color: variables.$Neutrals-Neutral-Alt;
+    border-radius: 24px;
+    padding: 16px 16px 80px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    img {
+        border-radius: 20px;
+    }
+}
+
+// Que vas a encontrar Section
+.contenido {
+    background-image: url("../../assets/img/serpientes/serpiente-brand-200.svg");
+    background-repeat: no-repeat;
+    background-position: center 350px;
+    background-color: variables.$Primary-Accent-700;
+    padding: 80px 56px;
+    border-radius: 40px;
+    margin: 16px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contenido-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        .contenido-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            span {
+                display: inline-block;
+                padding: 12px;
+                border-radius: 80px;
+                border: 0.5px solid variables.$Secondary-Orange-500;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                color: variables.$Secondary-Orange-900;
+                background-color: #FFFFFF;
+            }
+        }
+        .contenido-info-container {
+            width: 1200px;
+            height: 680px;
+            position: relative;
+            .contenido-libro-image-container {
+                @extend .libro-image-container;
+                max-width: 468px;
+                transform: rotate(1.951deg);
+                position: absolute;
+                left: 356px;
+            }
+            .info-primary {
+                position: absolute;
+                left: 0;
+                top: 202px;
+            }
+            .info-orange {
+                position: absolute;
+                left: 114px;
+                bottom: 0;
+            }
+            .info-accent {
+                position: absolute;
+                top: 44px;
+                right: 0;
+            }
+            .info-green {
+                position: absolute;
+                top: 324px;
+                right: 62px;
+            }
+            .contenido-info-card {
+                padding: 16px;
+                border-radius: 24px;
+                width: 388px;
+                background-color: #FFFFFF;
+                box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                .info-card-content {
+                    padding: 24px;
+                    border-radius: 20px;
+                    background-color: variables.$Primary-Brand-50;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    gap: 16px;
+                    align-self: stretch;
+                    .svg-container{
+                        width: 24px;
+                        height: 24px;
+                        padding: 12px;
+                        border-radius: 8px;
+                        background-color: variables.$Primary-Brand-700;
+                    }
+                }
+                .content-orange {
+                    background-color: variables.$Secondary-Orange-50;
+                    .svg-container {
+                        background-color: variables.$Secondary-Orange-200;
+                    }
+                }
+                .content-accent {
+                    background-color: variables.$Primary-Accent-100;
+                    .svg-container {
+                        background-color: variables.$Primary-Accent-700;
+                    }
+                }
+                .content-green {
+                    background-color: variables.$Secondary-Green-50;
+                    .svg-container {
+                        background-color: variables.$Secondary-Green-500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Publico objetivo Section
+.publico {
+    margin-top: 16px;
+    background-color: variables.$Primary-Brand-700;
+    padding: 80px 56px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .publico-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .publico-tag {
+            align-self: flex-end;
+            padding: 12px;
+            margin: 0px 40px -30px 0;
+            transform: rotate(2.69deg);
+            border-radius: 80px;
+            border: 0.5px solid variables.$Secondary-Orange-500;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            color: variables.$Secondary-Orange-900;
+            background-color: #FFFFFF;
+        }
+        .publico-description-container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 80px;
+            flex: 1 0 0;
+
+            .publico-description {
+                max-width: 520px;
+                h2 {
+                    color: #FFFFFF;
+                    margin-bottom: 16px;
+                }
+                p {
+                    color: #FFFFFF;
+                }
+            }
+            .publico-info-card {
+                padding: 16px;
+                border-radius: 24px;
+                background-color: variables.$Neutrals-Neutral-Alt;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 24px;
+                flex: 1 0 0;
+
+                .publico-tipos-container {
+                    padding: 32px;
+                    border-radius: 20px;
+                    background-color: variables.$Primary-Accent-100;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    align-self: stretch;
+                    gap: 32px;
+
+                    .publico-tipos {
+                        h4 {
+                            font-family: "Montserrat", sans-serif;
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            line-height: 28px;
+                            color: variables.$Neutrals-Neutral-900;
+                        }
+                        p {
+                            line-height: 24px;
+                            color: variables.$Neutrals-Neutral-900;
+                        }
+                    }
+                }
+                .publico-tipos-button {
+                    width: -webkit-fill-available;
+                    max-width: 464px;
+                    padding: 16px 48px;
+                    border-radius: 80px;
+                    background-color: variables.$Primary-Brand-700;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    &:hover {
+                        background-color: variables.$Primary-Brand-800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Que vas a lograr Section
+.logros {
+    background-color: variables.$Primary-Accent-700;
+    padding: 80px 56px;
+    border-radius: 40px;
+    margin: 16px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logros-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+
+        .logros-card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .logros-card-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 16px;
+
+                .logros-card {
+                    max-width: 316px;
+                    padding: 40px 16px 16px 16px;
+                    background-color: #FFFFFF;
+                    border-radius: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    flex: 1 0 0;
+                    align-self: stretch;
+                    .card-orange {
+                        height: 100%;
+                        min-height: 140px;
+                        padding: 24px;
+                        border-radius: 20px;
+                        background-color: variables.$Secondary-Orange-50;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                    .card-green {
+                        @extend .card-orange;
+                        background-color: variables.$Secondary-Green-50;
+                    }
+                    .card-brand {
+                        @extend .card-orange;
+                        background-color: variables.$Primary-Brand-50;
+                    }
+                    .card-accent {
+                        @extend .card-orange;
+                        background-color: variables.$Primary-Accent-100;
+                    }
+                }
+            }
+            
+            .logros-tag {
+                align-self: flex-end;
+                padding: 12px;
+                margin: -21px 40px 0px 0px;
+                border-radius: 80px;
+                border: 0.5px solid variables.$Secondary-Orange-500;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                color: variables.$Secondary-Orange-900;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+}

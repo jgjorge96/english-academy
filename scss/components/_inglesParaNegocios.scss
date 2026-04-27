@@ -1,0 +1,368 @@
+@use "../utilities/variables";
+
+// Hero Section
+.negocios-hero {
+    background-image: url("../../assets/img/serpientes/serpiente-brand-200-alt.svg");
+    background-repeat: no-repeat;
+    background-position: center -250px;
+    background-color: variables.$Primary-Brand-700;
+    border-radius: 40px;
+    padding: 80px 56px 32px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .negocios-hero-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        justify-content: center;
+        align-items: center;
+
+        .negocios-hero-details {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 64px;
+            .hero-details-title {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                width: 100%;
+                h1 {
+                    font-size: 4.5rem;
+                    font-weight: 700;
+                    line-height: 86px;
+                    color: #FFFFFF;
+                }
+                span {
+                    padding: 12px;
+                    border-radius: 80px;
+                    border: 1px solid #FFFFFF;
+                    background-color: variables.$Primary-Brand-200;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                }
+            }
+            .hero-details-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 48px;
+                padding-top: 48px;
+                max-width: 50%;
+                p {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                    span {
+                        font-weight: 700;
+                    }
+                }
+                .hero-details-contact {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: variables.$Primary-Brand-700;
+                    background-color: #FFFFFF;
+                    padding: 16px 48px;
+                    max-width: 464px;
+                    width: -webkit-fill-available;
+                    text-align: center;
+                    border-radius: 80px;
+                }
+            }
+        }
+        .negocios-hero-cards-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            .negocios-hero-card {
+                background-color: variables.$Neutrals-Neutral-Alt;
+                padding: 80px 16px 16px 16px;
+                border-radius: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                align-self: stretch;
+                flex: 1 0 0;
+
+                .negocios-hero-card-text {
+                    padding: 24px;
+                    border-radius: 20px;
+                    background-color: variables.$Primary-Accent-100;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    align-self: stretch;
+                    flex: 1 0 0;
+                    h4 {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 36px;
+                        color: variables.$Primary-Brand-700;
+                    }
+                    p {
+                        color: variables.$Primary-Brand-700;
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        line-height: 28px;
+                        margin-top: 8px;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Profesionales Section
+.profesionales {
+    background-color: variables.$Primary-Accent-700;
+    padding: 80px 56px;
+    margin: 16px 0px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .profesional-wrapper {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .profesional-tag {
+            align-self: flex-end;
+            padding: 12px;
+            margin: 0px 40px -30px 0;
+            transform: rotate(2.69deg);
+            border-radius: 80px;
+            border: 0.5px solid variables.$Secondary-Orange-500;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            color: variables.$Secondary-Orange-900;
+            background-color: #FFFFFF;
+        }
+        .profesional-info-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 80px;
+            align-items: flex-end;
+
+            .profesional-info-text {
+                max-width: 540px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                flex: 1 0 0;
+
+                h2 {
+                    color: variables.$Primary-Brand-700;
+                }
+                p {
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 28px;
+                    color: variables.$Primary-Brand-700;
+                }
+            }
+            .profesional-info-card {
+                padding: 16px;
+                border-radius: 24px;
+                background-color: variables.$Neutrals-Neutral-Alt;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 24px;
+                flex: 1 0 0;
+                .info-tipos-container {
+                    padding: 32px;
+                    border-radius: 20px;
+                    background-color: variables.$Primary-Accent-100;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    align-self: stretch;
+                    gap: 32px;
+
+                    .info-tipos {
+                        h4 {
+                            font-family: "Montserrat", sans-serif;
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            line-height: 28px;
+                            color: variables.$Neutrals-Neutral-900;
+                        }
+                        p {
+                            line-height: 24px;
+                            color: variables.$Neutrals-Neutral-900;
+                        }
+                    }
+                }
+                .info-tipos-button {
+                    width: -webkit-fill-available;
+                    max-width: 464px;
+                    padding: 16px 48px;
+                    border-radius: 80px;
+                    background-color: variables.$Primary-Brand-700;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    text-align: center;
+                    &:hover {
+                        background-color: variables.$Primary-Brand-800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Que incluye Section
+.incluye {
+    background-image: url(../../assets/img/serpientes/serpiente-brand-200.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80px 56px;
+    border-radius: 40px;
+    background-color: variables.$Primary-Brand-700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .incluye-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+        // incluye-cards-container ABAJO PARA EXTENDERLO A SOBRE-EN
+        .incluye-title-container {
+            h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 56px;
+                color: #FFFFFF;
+                margin-bottom: 8px;
+            }
+            p {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 28px;
+                color: #FFFFFF;
+            }
+        }
+        .incluye-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .incluye-info-text-container {
+                padding: 40px;
+                border-radius: 24px;
+                background-color: #FFFFFF;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                gap: 40px;
+                .incluye-info-text {
+                    h4 {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        line-height: 36px;
+                        color: variables.$Primary-Brand-700;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-size: 1.125rem;
+                        font-weight: 500;
+                        line-height: 28px;
+                        color: variables.$Primary-Brand-700;
+                    }
+                }
+                .incluye-info-button {
+                    width: -webkit-fill-available;
+                    max-width: fit-content;
+                    display: inline-block;
+                    padding: 16px 48px;
+                    border-radius: 80px;
+                    border: 2px solid variables.$Primary-Brand-700;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: variables.$Primary-Brand-700;
+                    text-align: center;
+                    &:hover {
+                        background-color: variables.$Primary-Brand-50;
+                    }
+                }
+            }
+        }
+    }
+}
+.incluye-cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    .incluye-card-wrapper {
+        padding: 40px 16px 16px 16px;
+        border-radius: 24px;
+        background-color: #FFFFFF;
+        .incluye-card {
+            padding: 24px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+            span {
+                padding: 12px;
+                border-radius: 8px;
+                width: 24px;
+                height: 24px;
+            }
+            &-blue {
+                background-color: variables.$Primary-Accent-100;
+                span {
+                    background-color: variables.$Primary-Accent-700;
+                }
+            }
+            &-green {
+                background-color: variables.$Secondary-Green-50;
+                span {
+                    background-color: variables.$Secondary-Green-500;
+                }
+            }
+            &-orange {
+                background-color: variables.$Secondary-Orange-50;
+                span {
+                    background-color: variables.$Secondary-Orange-200;
+                }
+            }
+            p {
+                color: variables.$Neutrals-Neutral-900;
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 28px;
+            }
+        }
+    }
+}

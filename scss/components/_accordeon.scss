@@ -1,0 +1,138 @@
+@use "../utilities/variables";
+/* ── Contenedor principal ── */
+.faq-container {
+  margin-top: 24px;
+  background: variables.$Primary-Accent-700;
+  border-radius: 40px;
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Wrapper ── */
+.faq-container-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 480px auto;
+  grid-template-rows: 1fr 1fr;
+  gap: 80px;
+  grid-template-areas: 
+    "faq-title accordion-container"
+    "faq-contact-container accordion-container";
+}
+
+/* ── Título ── */
+.faq-title {
+  grid-area: faq-title;
+  color: variables.$Neutrals-Neutral-900;
+}
+
+/* ── Accordion container ── */
+.accordion-container {
+  grid-area: accordion-container;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ── Ítems del acordeón ── */
+.accordion-item {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* ── Cabecera clicable ── */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  cursor: pointer;
+  gap: 16px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.accordion-item:first-child .accordion-header {
+  padding-top: 0;
+}
+
+/* ── Texto de la pregunta ── */
+.accordion-question {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: variables.$Neutrals-Neutral-900;
+  line-height: 36px;
+  flex: 1;
+}
+
+/* ── Ícono chevron ── */
+.accordion-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #1a1a2e;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-icon svg {
+  transform: rotate(180deg);
+}
+
+/* ── Cuerpo colapsable ── */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-item.open .accordion-body {
+  max-height: 300px;
+}
+
+/* ── Texto de respuesta ── */
+.accordion-content {
+  padding-bottom: 24px;
+  font-size: 16px;
+  color: variables.$Secondary-Green-900;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.faq-contact-container {
+  grid-area: faq-contact-container;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 24px;
+
+  p {
+    font-size: 1.125rem;
+    color: variables.$Neutrals-Neutral-900;
+    line-height: 28px;
+    span {
+      font-weight: 700;
+    }
+  }
+  .dudas-contact-button {
+    display: inline-flex;
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 80px;
+    border: 2px solid variables.$Neutrals-Neutral-900;
+    color: variables.$Neutrals-Neutral-900;
+  }
+}

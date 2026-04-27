@@ -1,0 +1,79 @@
+@use "../utilities/variables";
+footer {
+    background-color: variables.$Primary-Brand-700;
+    padding: 80px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // align-items: center;
+    
+    .footer-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    h3 {
+        font-family: "Lexend", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 48px;
+        color: #FFFFFF;
+    }
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        // min-width: 772px;
+        align-items: flex-end;
+        gap: 32px;
+
+        .pages-container {
+            padding: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            li {
+                a {
+                    font-size: 1.125rem;
+                    line-height: 24px;
+                    color: variables.$Neutrals-Neutral-Alt;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            li {
+                .contact-mail {
+                    display: inline-block;
+                    padding: 12px 16px;
+                    border-radius: 999px;
+                    border: 1px solid #FFFFFF;
+                    background-color: variables.$Primary-Accent-100;
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    color: variables.$Primary-Brand-700;
+                }
+                .contact-RRSS {
+                    height: 24px;
+                    width: 24px;
+                    display: inline-block;
+                    padding: 12px;
+                    border-radius: 999px;
+                    border: 1px solid #FFFFFF;
+                    background-color: variables.$Primary-Accent-100;
+                }
+            }
+        }
+    }
+}

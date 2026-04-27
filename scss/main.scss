@@ -1,0 +1,15 @@
+// BASE
+@use "./base/tipografia";
+@use "./base/reset";
+
+// COMPONENTS
+@use "./components/nav";
+
+@use "./components/accordeon";
+@use "./components/index";
+@use "./components/programas";
+@use "./components/inglesParaNegocios";
+@use "./components/sobreEnglisNetwork";
+@use "./components/libro";
+
+@use "./components/footer";
