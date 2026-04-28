@@ -517,7 +517,6 @@ nav {
   align-self: stretch;
   max-width: 405px;
   min-width: 352px;
-  height: 364px;
 }
 .programas .programas-cards-container .programa-flow, .programas-main .programas-cards-container .programa-flow {
   background-color: #20438C;
@@ -534,6 +533,7 @@ nav {
 .programas .programas-cards-container .programas-card-flow .programa-tag-container, .programas-main .programas-cards-container .programas-card-flow .programa-tag-container, .programas .programas-cards-container .programa-flash .programas-card-flash .programa-tag-container, .programas-main .programas-cards-container .programa-flash .programas-card-flash .programa-tag-container, .programas .programas-cards-container .programa-kids .programas-card-kids .programa-tag-container, .programas-main .programas-cards-container .programa-kids .programas-card-kids .programa-tag-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .programas .programas-cards-container .programas-card-flow .programa-tag-container .programa-tag, .programas-main .programas-cards-container .programas-card-flow .programa-tag-container .programa-tag, .programas .programas-cards-container .programa-flash .programas-card-flash .programa-tag-container .programa-tag, .programas-main .programas-cards-container .programa-flash .programas-card-flash .programa-tag-container .programa-tag, .programas .programas-cards-container .programa-kids .programas-card-kids .programa-tag-container .programa-tag, .programas-main .programas-cards-container .programa-kids .programas-card-kids .programa-tag-container .programa-tag {
@@ -932,7 +932,12 @@ nav {
   color: #FFFFFF;
   background-color: #305397;
 }
+.programas-main .programas-wrapper .programas-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .programas-main .programas-wrapper .programas-cards-container .programas-card {
+  min-width: fit-content;
   background-color: #FFFAF4;
 }
 .programas-main .programas-wrapper .programas-cards-container .programas-card .programas-card-flow {
@@ -973,6 +978,16 @@ nav {
   background-color: #543D36;
 }
 
+@media (min-width: 743px) and (max-width: 1024px) {
+  .programas-main .programas-wrapper .programas-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 743px) {
+  .programas-main .programas-wrapper .programas-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
 .negocios-hero {
   background-image: url("../assets/img/serpientes/serpiente-brand-200-alt.svg");
   background-repeat: no-repeat;

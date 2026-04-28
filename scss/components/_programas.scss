@@ -43,7 +43,10 @@
             }
         }
         .programas-cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             .programas-card {
+                min-width: fit-content;
                 background-color: variables.$Neutrals-Neutral-Alt;
                 .programas-card-flow {
                     background-color: variables.$Primary-Brand-50;
@@ -86,6 +89,28 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+// Media Queries
+@media(min-width: 743px) and (max-width:1024px) {
+    .programas-main {
+        .programas-wrapper {
+            .programas-cards-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media(max-width:743px) {
+    .programas-main {
+        .programas-wrapper {
+            .programas-cards-container {
+                grid-template-columns: 1fr;
             }
         }
     }

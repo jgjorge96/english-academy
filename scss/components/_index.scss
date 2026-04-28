@@ -161,7 +161,6 @@
             align-self: stretch;
             max-width: 405px;
             min-width: 352px;
-            height: 364px;
         }
         .programa-flow {
             background-color: variables.$Primary-Brand-700;
@@ -178,6 +177,7 @@
             .programa-tag-container {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 gap: 8px;
                 .programa-tag{
                     padding: 12px;
