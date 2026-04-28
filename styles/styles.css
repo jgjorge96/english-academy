@@ -370,7 +370,7 @@ nav {
 }
 
 .aprende-ingles {
-  background-image: url("../assets/img/serpientes/serpiente-accent-200-alt.svg");
+  background-image: url("./assets/img/serpientes/serpiente-accent-200-alt.svg");
   background-repeat: no-repeat;
   background-position: center -180px;
   background-color: #BDE2F8;
@@ -386,6 +386,8 @@ nav {
   gap: 64px;
 }
 .aprende-ingles .aprende-ingles-title {
+  width: 100%;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -396,6 +398,7 @@ nav {
   color: #20438C;
 }
 .aprende-ingles .aprende-ingles-title div {
+  padding-right: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -412,6 +415,7 @@ nav {
   align-items: flex-start;
 }
 .aprende-ingles .aprende-ingles-description {
+  width: 100%;
   padding-top: 48px;
   display: flex;
   flex-direction: column;
@@ -614,7 +618,7 @@ nav {
 }
 
 .como-funciona {
-  background-image: url("../assets/img/serpientes/serpiente-brand-200.svg");
+  background-image: url("./assets/img/serpientes/serpiente-brand-200.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #20438C;
@@ -774,7 +778,7 @@ nav {
 }
 
 .opiniones {
-  background-image: url("../assets/img/serpientes/serpiente-orange-50.svg");
+  background-image: url("./assets/img/serpientes/serpiente-orange-50.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120%;
@@ -1046,6 +1050,9 @@ nav {
   width: -webkit-fill-available;
   text-align: center;
   border-radius: 80px;
+}
+.negocios-hero .negocios-hero-wrapper .negocios-hero-details .hero-details-text .hero-details-contact:hover {
+  background-color: #EBF0FB;
 }
 .negocios-hero .negocios-hero-wrapper .negocios-hero-cards-container {
   display: flex;
@@ -1505,6 +1512,9 @@ nav {
   line-height: 28px;
   color: #20438C;
 }
+.camino .camino-wrapper .camino-button:hover {
+  background-color: #E5F0F6;
+}
 
 .libro-hero {
   background-color: #20438C;
@@ -1576,6 +1586,9 @@ nav {
   font-weight: 500;
   line-height: 28px;
   color: #20438C;
+}
+.libro-hero .libro-wrapper .libro-details-contact:hover {
+  background-color: #EBF0FB;
 }
 
 .libro-image-container, .contenido .contenido-wrapper .contenido-info-container .contenido-libro-image-container {

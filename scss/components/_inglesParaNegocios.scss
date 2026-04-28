@@ -75,6 +75,9 @@
                     width: -webkit-fill-available;
                     text-align: center;
                     border-radius: 80px;
+                    &:hover {
+                        background-color: variables.$Primary-Brand-50;
+                    }
                 }
             }
         }
