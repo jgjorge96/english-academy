@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 
 // Hero Section
 .aprende-ingles {
@@ -26,8 +27,6 @@
         gap: 8px;
 
         h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
             color: variables.$Primary-Brand-700;
         }
         div {
@@ -36,12 +35,7 @@
             flex-direction: column;
             align-items: flex-end;
             span {
-                font-size: 0.875rem;
-                color: variables.$Primary-Brand-700;
-                padding: 12px;
-                border-radius: 80px;
-                border: 0.5px solid variables.$Primary-Accent-100;
-                background-color: variables.$Primary-Accent-50;
+                @include mixins.tag(variables.$Primary-Accent-100, variables.$Primary-Accent-50, variables.$Primary-Brand-700);
             }
         }
         .span-bottom {
@@ -59,15 +53,12 @@
         gap: 48px;
 
         p {
-            font-size: 1.125rem;
-            line-height: 20px;
             color: variables.$Primary-Brand-700;
 
             span {
                 font-weight: 600;
             }
         }
-
         .description-buttons-container {
             display: flex;
             flex-direction: column;
@@ -78,24 +69,14 @@
             width: 100%;
 
             .description-button {
-                padding: 16px 48px;
-                border-radius: 80px;
-                background-color: variables.$Primary-Brand-700;
-                font-size: 1.125rem;
-                color: #FFFFFF;
-                text-decoration: none;
-                display: block;
-                align-self: stretch;
-                text-align: center;
-                &:hover {
-                    background-color: variables.$Primary-Brand-800;
-                }
+                @include mixins.contact-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF)
             }
             .programs-button {
                 padding: 16px;
                 font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 24px;
                 color: variables.$Primary-Brand-700;
-                text-decoration: none;
                 &:hover {
                     text-decoration: underline;
                 }
@@ -115,6 +96,7 @@
     justify-content: center;
     
     .programas-wrapper {
+        width: 100%;
         max-width: 1440px;
         display: flex;
         flex-direction: column;
@@ -134,15 +116,8 @@
             color: variables.$Neutrals-Neutral-900;
         }
         .all-programs {
-            border-radius: 80px;
+            @include mixins.info-button(variables.$Neutrals-Neutral-Alt, variables.$Neutrals-Neutral-Alt, variables.$Primary-Brand-700);
             border: 2px solid variables.$Primary-Brand-700;
-            padding: 12px 24px;
-            font-size: 1rem;
-            color: variables.$Primary-Brand-700;
-            text-decoration: none;
-            &:hover {
-                background-color: variables.$Primary-Brand-50;
-            }
         }
     }
     .programas-cards-container {
@@ -159,20 +134,12 @@
             border-radius: 24px;
             flex: 1 0 0;
             align-self: stretch;
-            max-width: 405px;
-            min-width: 352px;
         }
         .programa-flow {
             background-color: variables.$Primary-Brand-700;
         }
         .programas-card-flow {
-            border-radius: 20px;
-            padding: 24px;
-            background-color: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
+            @include mixins.card-content(#FFFFFF);
 
             .programa-tag-container {
                 display: flex;
@@ -180,13 +147,7 @@
                 flex-wrap: wrap;
                 gap: 8px;
                 .programa-tag{
-                    padding: 12px;
-                    border-radius: 80px;
-                    border: 0.5px solid variables.$Primary-Brand-700;
-                    background-color: variables.$Primary-Accent-50;
-                    font-size: 0.875rem;
-                    line-height: 16px;
-                    color: variables.$Primary-Brand-700;
+                    @include mixins.tag(variables.$Primary-Brand-700, variables.$Primary-Accent-50, variables.$Primary-Brand-700);
                 }
             }
             .programa-details-container {
@@ -197,29 +158,16 @@
                 align-items: flex-start;
                 .programa-details-wrapper {
                     h4 {
-                        font-size: 2rem;
-                        font-weight: 700px;
                         color: variables.$Primary-Brand-700;
                     }
                     p {
                         margin-top: 8px;
                         margin-bottom: 24px;
-                        font-size: 1.125rem;
-                        font-weight: 500;
-                        line-height: 28px;
                         color: variables.$Primary-Brand-700;
                     }
                 }
                 .programa-details {
-                    display: inline-block;
-                    padding: 12px 24px;
-                    border-radius: 80px;
-                    background-color: variables.$Primary-Brand-700;
-                    font-size: 1rem;
-                    color: #FFFFFF;
-                    &:hover {
-                        background-color: variables.$Primary-Brand-800;
-                    }
+                    @include mixins.info-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF);
                 }
             }
         }
@@ -230,9 +178,8 @@
                 @extend .programas-card-flow;
                 .programa-tag-container {
                     .programa-tag {
-                        border: 0.5px solid variables.$Secondary-Green-200;
-                        background-color: variables.$Secondary-Green-50;
-                        color: variables.$Secondary-Green-900;
+                        @include mixins.tag(variables.$Secondary-Green-200, variables.$Secondary-Green-50, variables.$Secondary-Green-900);
+                        
                     }
                 }
                 .programa-details-container {
@@ -245,10 +192,7 @@
                         }
                     }
                     .programa-details {
-                        background-color: variables.$Secondary-Green-900;
-                        &:hover {
-                            background-color: variables.$Secondary-Green-700;
-                        }
+                        @include mixins.info-button(variables.$Secondary-Green-900, variables.$Secondary-Green-700, #FFFFFF);
                     }
                 }
             }
@@ -259,9 +203,7 @@
                 @extend .programas-card-flow;
                 .programa-tag-container {
                     .programa-tag {
-                        border: 0.5px solid variables.$Primary-Accent-100;
-                        background-color: variables.$Primary-Accent-50;
-                        color: variables.$Primary-Brand-700;
+                        @include mixins.tag(variables.$Primary-Accent-100, variables.$Primary-Accent-50, variables.$Primary-Brand-700);
                     }
                 }
                 .programa-details-container {
@@ -274,14 +216,14 @@
                         }
                     }
                     .programa-details {
-                        background-color: variables.$Primary-Brand-700;
-                        &:hover {
-                            background-color: variables.$Primary-Brand-800;
-                        }
+                        @include mixins.info-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF);
                     }
                 }
             }
         }
+    }
+    .programas-container-carousel {
+        display: none;
     }
 }
 
@@ -328,42 +270,24 @@
             }
         }
         .pasos-card-container {
-            padding: 80px 16px 16px 16px;
             width: 100%;
             max-width: 438px;
-            border-radius: 24px;
-            background-color: variables.$Neutrals-Neutral-Alt;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
+            @include mixins.card-container(variables.$Neutrals-Neutral-Alt, 80px);
 
             .pasos-card {
-                background-color: variables.$Primary-Accent-100;
-                border-radius: 20px;
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                flex: 1 0 0;
-                align-items: flex-start;
+                @include mixins.card-content(variables.$Primary-Accent-100);
 
                 .paso-tag {
-                    color: #FFFFFF;
-                    padding: 12px;
-                    border-radius: 80px;
-                    background-color: variables.$Primary-Brand-700;
+                    @include mixins.tag(none, variables.$Primary-Brand-700, #FFFFFF);
                 }
                 .pasos-details {
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
                     h4 {
-                        font-size: 1.5rem;
-                        font-weight: 700;
                         color: variables.$Primary-Brand-700;
                     }
                     p {
-                        font-size: 1.125rem;
                         color: variables.$Primary-Brand-700;
                         padding-bottom: 24px;
                         span {
@@ -401,8 +325,6 @@
                 margin-bottom: 8px;
             }
             p {
-                font-size: 1.125rem;
-                line-height: 28px;
                 color: variables.$Neutrals-Neutral-900;
             }
         }
@@ -431,20 +353,11 @@
                     }
                 }
                 .motivos-detail {
-                    h4 {
-                        font-size: 1.5rem;
-                        font-weight: 700;
-                        line-height: 36px;
+                    h4,h5,p {
                         color: variables.$Neutrals-Neutral-900;
                     }
-                    p {
+                    h5 {
                         margin-top: 4px;
-                        margin-bottom: 24px;
-                        font-size: 1.125rem;
-                        line-height: 28px;
-                        span {
-                            font-weight: 700;
-                        }
                     }
                 }
             }    
@@ -480,6 +393,8 @@
     align-items: center;
 
     .opiniones-wrapper{
+        width: 100%;
+        max-width: 1440px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -490,13 +405,9 @@
             flex-direction: column;
             span {
                 align-self: flex-end;
-                padding: 12px;
-                border-radius: 80px;
-                border: 0.5px solid variables.$Secondary-Orange-500;
-                color: variables.$Secondary-Orange-900;
                 transform: rotate(3.938deg);
                 margin-bottom: -10px;
-                background-color: #FFFFFF;
+                @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900);
             }
         }
         .opiniones-container {
@@ -513,21 +424,8 @@
                 align-items: flex-start;
                 gap: 16px;
 
-                h4 {
-                    font-size: 1.125rem;
-                    font-weight: 700;
-                    line-height: 28px;
-                }
-                p {
-                    font-size: 1rem;
-                    line-height: 24px;
+                .p-alt {
                     margin-top: 8px;
-                }
-                h5 {
-                    font-family: "Montserrat", sans-serif;
-                    font-size: 1rem;
-                    font-weight: 700;
-                    line-height: 24px;
                 }
                 &-1 {
                     top: 15.4px;
@@ -580,5 +478,9 @@
                 }
             }
         }
+        .opiniones-container-carousel {
+            display: none;
+        }
     }
 }
+

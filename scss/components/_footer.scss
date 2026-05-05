@@ -24,6 +24,9 @@ footer {
         line-height: 48px;
         color: #FFFFFF;
     }
+    .brand-responsive {
+        display: none;
+    }
     .footer-nav {
         display: flex;
         flex-direction: column;
@@ -72,6 +75,87 @@ footer {
                     border-radius: 999px;
                     border: 1px solid #FFFFFF;
                     background-color: variables.$Primary-Accent-100;
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media(max-width: 1024px) {
+    footer {
+        margin: 16px;
+        padding: 40px 24px;
+        border-radius: 24px;
+        .footer-wrapper {
+            flex-direction: column;
+            gap: 24px;
+            .brand-desktop {
+                display: none;
+            }
+            .brand-responsive {
+                display: block;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        .footer-nav {
+            gap: 24px;
+            align-items: center;
+            .pages-container {
+                padding: 12px 8px;
+                li {
+                    a {
+                        font-size: 0.875rem;
+                        line-height: 16px;
+                    }
+                }
+            }
+            .contact-container {
+                gap: 12px;
+            }
+        }
+    }
+}
+
+// Mobile
+@media(max-width: 743px) {
+    footer {
+        margin: 8px 16px;
+        .footer-wrapper {
+            align-items: flex-start;
+            .brand-desktop {
+                display: block;
+            }
+            .brand-responsive {
+                display: none;
+            }
+            .footer-nav {
+                align-items: flex-start;
+                .pages-container {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0px;
+                    padding: 12px 8px 12px 0px;
+                    li {
+                        padding: 12px 8px 12px 0px;
+                    }
+                }
+                .contact-container {
+                    gap: 4px;
+                    li {
+                        .contact-mail {
+                            padding: 8px;
+                            font-size: 0.875rem;
+                            line-height: 16px;
+                        }
+                        .contact-RRSS {
+                            padding: 8px;
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
                 }
             }
         }

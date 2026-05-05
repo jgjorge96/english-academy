@@ -1,0 +1,88 @@
+@use  "./variables";
+// Info Tag
+@mixin tag ($border-color, $background-color, $color) {
+    padding: 12px;
+    border-radius: 80px;
+    border: 0.5px solid $border-color;
+    background-color: $background-color;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 16px;
+    color: $color;
+    @media(max-width: 1024px) {
+        padding: 8px;
+    }
+}
+
+// Contact Button
+@mixin contact-button ($background-color, $background-color-hover, $color) {
+    max-width: 464px;
+    display: inline-block;
+    padding: 16px 48px;
+    border-radius: 80px;
+    align-self: stretch;
+    background-color: $background-color;
+    color: $color;
+    font-size: 1.125rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 24px;
+    &:hover {
+        background-color: $background-color-hover;
+    }
+    @media(max-width: 1024px) {
+        padding: 12px 24px;
+        font-size: 0.875rem;
+        line-height: 16px;
+    }
+}
+
+// Info Button
+@mixin info-button ($background-color, $background-color-hover, $color) {
+    display: inline-block;
+    border-radius: 80px;
+    padding: 12px 24px;
+    background-color: $background-color;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: $color;
+    &:hover {
+        background-color: $background-color-hover;
+    }
+    @media(max-width: 1024px) {
+        font-size: 0.875rem;
+        line-height: 16px;
+    }
+}
+
+// Card Container
+@mixin card-container ($background-color, $padding-top) {
+    background-color: $background-color;
+    padding: $padding-top 16px 16px 16px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: stretch;
+    flex: 1 0 0;
+    @media(max-width: 1024px) {
+        padding: 40px 8px 8px 8px;
+    }
+}
+
+@mixin card-content ($background-color) {
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    flex: 1 0 0;
+    gap: 16px;
+    background-color: $background-color;
+    @media(max-width: 1024px) {
+        padding: 20px;
+    }
+}

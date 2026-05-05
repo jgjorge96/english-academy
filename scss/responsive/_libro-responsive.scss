@@ -1,0 +1,241 @@
+// Tablet
+@media(max-width: 1024px) {
+
+    // Hero Section
+    .libro-hero {
+        padding: 80px 48px;
+        border-radius: 24px;
+        .libro-wrapper{
+            gap: 40px;
+            .libro-details-container {
+                gap: 24px;
+                padding-top: 0px;
+            }
+            .libro-details-contact {
+                width: fit-content;
+            }
+        }
+        
+    }
+    .libro-image-container {
+        padding: 16px 16px 40px 16px;
+        max-width: 252px;
+    }
+
+    // Que vas a encontrar Section
+    .contenido {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .contenido-wrapper {
+            gap: 24px;
+            .contenido-title {
+                text-align: center;
+            }
+            // .contenido-info-container{
+            // MAS ABAJO CON UN MEDIA DE 1300
+            // }
+        }
+    }
+
+    // Publico objetivo Section
+    .publico{
+        padding: 40px 24px;
+        border-radius: 24px;
+        .publico-wrapper {
+            .tag-desktop {
+                display: none;
+            }
+            .publico-description-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+                .tag-mobile {
+                    display: block;
+                    margin: 0px 40px -47px 0;
+                }
+                .publico-description {
+                    max-width: none;
+                    text-align: center;
+                    h2 {
+                        margin-bottom: 8px;
+                    }
+                }
+                .publico-info-card {
+                    gap: 16px;
+                    width: -webkit-fill-available;
+                    .publico-tipos-container {
+                        padding: 20px;
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Que vas a lograr Section
+    .logros {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .logros-wrapper {
+            gap: 24px;
+            .logros-card-container {
+                .logros-card-wrapper {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-areas: 
+                    "orange-1 orange-1 orange-1 orange-1 green-1 green-1 green-1 green-1"
+                    "brand-1 brand-1 brand-1 brand-1 accent-1 accent-1 accent-1 accent-1";
+                    .logros-card {
+                        max-width: none;
+                    }
+                    .orange-1 {
+                        grid-area: orange-1;
+                    }
+                    .green-1 {
+                        grid-area: green-1;
+                    }
+                    .brand-1 {
+                        grid-area: brand-1;
+                    }
+                    .accent-1 {
+                        grid-area: accent-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// EXCLUSIVO CARDS CON ABSOLUTE
+@media(max-width:1300px) {
+    .contenido {
+        .contenido-wrapper {
+            .contenido-info-container{
+                width: auto;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                    "info-primary info-primary info-primary info-primary info-accent info-accent info-accent info-accent"
+                    "info-orange info-orange info-orange info-orange info-green info-green info-green info-green";
+                gap: 16px;
+                .contenido-libro-image-container {
+                    display: none;
+                }
+                .info-primary, .info-orange, .info-accent, .info-green {
+                    position: unset;
+                }
+                .info-primary {
+                    grid-area: info-primary;
+                }
+                .info-orange {
+                    grid-area: info-orange;
+                }
+                .info-accent {
+                    grid-area: info-accent;
+                }
+                .info-green {
+                    grid-area: info-green;
+                }
+                .contenido-info-card {
+                    width: -webkit-fill-available;
+                    padding: 8px;
+                    .info-card-content {
+                        flex-direction: column;
+                        flex: 1 0 0;
+                        .svg-container {
+                            width: 20px;
+                            height: 20px;
+                            padding: 10px;
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media(max-width: 743px) {
+    .libro-hero {
+        padding: 40px 24px;
+        .libro-wrapper-mobile {
+            display: block;
+            .libro-details-container {
+                .libro-details-description {
+                    align-items: center;
+                    .libro-details-title {
+                        text-align: center;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    .libro-image-container {
+                        width: -webkit-fill-available;
+                    }
+                }
+                .libro-details-contact {
+                    align-self: center;
+                }
+            }
+        }
+        .libro-wrapper-main {
+            display: none;
+        }
+    }
+
+    // Que vas a encontrar Section
+    .contenido {
+        margin: 8px 0px;
+        .contenido-wrapper {
+            .contenido-info-container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas: 
+                    "info-primary info-primary info-primary info-primary"
+                    "info-accent info-accent info-accent info-accent"
+                    "info-orange info-orange info-orange info-orange "
+                    "info-green info-green info-green info-green";
+            }
+        }
+    }
+
+    // Publico objetivo Section
+    .publico {
+        margin-top: 0px;
+        .publico-wrapper {
+            .publico-description-container {
+                .tag-mobile {
+                    margin: 0px 18px -47px 0;
+                }
+            }
+        }
+    }
+
+    // Que vas a lograr Section
+    .logros {
+        margin: 8px 0px;
+        .logros-wrapper {
+            .logros-card-container {
+                .logros-card-wrapper {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(4, 1fr);
+                    grid-template-areas: 
+                        "orange-1 orange-1 orange-1 orange-1"
+                        "green-1 green-1 green-1 green-1"
+                        "brand-1 brand-1 brand-1 brand-1"
+                        "accent-1 accent-1 accent-1 accent-1";
+                }
+                .logros-tag {
+                    display: none;
+                }
+            }
+        }
+    }
+}

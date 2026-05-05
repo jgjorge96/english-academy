@@ -1,0 +1,223 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Media Queries Carouseles
+
+// Carousel programas
+@media(max-width:1024px) {
+    .programas {
+        margin: 16px 0px;
+        padding: 40px 24px;
+        border-radius: 24px;
+        // Ajuste mobile
+        @media(max-width:743px) {
+            margin: 8px 0px;
+        }
+        .programas-wrapper {
+            gap: 24px;
+        }
+        .programas-cards-container {
+            display: none;
+        }
+        .programas-container-carousel {
+            width: -webkit-fill-available;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            .programas-carousel-wrapper{
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                > * {
+                    scroll-snap-align: start;
+                    flex-shrink: 0;
+                }
+                .programas-card {
+                    width: 288px;
+                    display: flex;
+                    padding: 40px 8px 8px 8px;
+                    border-radius: 24px;
+                    align-self: stretch;
+                    // Ajuste mobile
+                    @media(max-width:743px) {
+                        width: 244px;
+                    }
+                }
+                .programa-flow {
+                    background-color: variables.$Primary-Brand-700;
+                }
+                .programas-card-flow, .programas-card-kids, .programas-card-flash {
+                    @include mixins.card-content(#FFFFFF);
+
+                    .programa-tag-container {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        .programa-tag{
+                            @include mixins.tag(variables.$Primary-Brand-700, variables.$Primary-Accent-50, variables.$Primary-Brand-700);
+                        }
+                    }
+                    .programa-details-container {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        .programa-details-wrapper {
+                            h4 {
+                                color: variables.$Primary-Brand-700;
+                            }
+                            p {
+                                margin-top: 8px;
+                                margin-bottom: 24px;
+                                color: variables.$Primary-Brand-700;
+                            }
+                        }
+                        .programa-details {
+                            @include mixins.info-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF);
+                        }
+                    }
+                }
+        
+                .programa-kids {
+                    background-color: variables.$Secondary-Green-500;
+                    .programas-card-kids {
+                        // @extend .programas-card-flow;
+                        .programa-tag-container {
+                            .programa-tag {
+                                @include mixins.tag(variables.$Secondary-Green-200, variables.$Secondary-Green-50, variables.$Secondary-Green-900);
+                                
+                            }
+                        }
+                        .programa-details-container {
+                            .programa-details-wrapper {
+                                h4 {
+                                    color: variables.$Secondary-Green-900;
+                                }
+                                p {
+                                    color: variables.$Secondary-Green-900;
+                                }
+                            }
+                            .programa-details {
+                                @include mixins.info-button(variables.$Secondary-Green-900, variables.$Secondary-Green-700, #FFFFFF);
+                            }
+                        }
+                    }
+                }
+                .programa-flash {
+                    background-color: variables.$Primary-Accent-700;
+                    .programas-card-flash {
+                        // @extend .programas-card-flow;
+                        .programa-tag-container {
+                            .programa-tag {
+                                @include mixins.tag(variables.$Primary-Accent-100, variables.$Primary-Accent-50, variables.$Primary-Brand-700);
+                            }
+                        }
+                        .programa-details-container {
+                            .programa-details-wrapper {
+                                h4 {
+                                    color: variables.$Primary-Brand-700;
+                                }
+                                p {
+                                    color: variables.$Primary-Brand-700;
+                                }
+                            }
+                            .programa-details {
+                                @include mixins.info-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Carousel Opiniones
+@media(max-width: 1200px) {
+    // Opiniones Section
+    .opiniones {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .opiniones-wrapper {
+            gap: 24px;
+            .opiniones-title {
+                gap: 8px;
+                span {
+                    align-self: center;
+                    transform: none;
+                    margin-bottom: 0;
+                }
+            }
+            .opiniones-container {
+                display: none;
+            }
+            .opiniones-container-carousel {
+                width: -webkit-fill-available;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                .carousel-wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 16px;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scrollbar-width: none;
+
+                    > * {
+                        scroll-snap-align: start;
+                        flex-shrink: 0;
+                    }
+                    .opiniones-card{
+                        width: 255px;
+                        padding: 24px 20px;
+                        border-radius: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 8px;
+                        &-1 {
+                            background-color: variables.$Secondary-Green-500;
+                            h4, p, h5 {
+                                color: variables.$Secondary-Green-900;
+                            }
+                        }
+                        &-2 {
+                            background-color: variables.$Secondary-Orange-500;
+                            h4, p, h5 {
+                                color: variables.$Secondary-Orange-900;
+                            }
+                        }
+                        &-3 {
+                            background-color: variables.$Primary-Accent-700;
+                            h4, p, h5 {
+                                color: variables.$Neutrals-Neutral-900;
+                            }
+                        }
+                        &-4 {
+                            background-color: variables.$Primary-Accent-700;
+                            h4, p, h5 {
+                                color: variables.$Neutrals-Neutral-900;
+                            }
+                        }
+                        &-5 {
+                            background-color: variables.$Secondary-Green-500;
+                            h4, p, h5 {
+                                color: variables.$Secondary-Green-900;
+                            }
+                        }
+                        // Ajuste mobile
+                        @media(max-width: 743px) {
+                            width: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

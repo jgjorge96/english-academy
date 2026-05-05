@@ -1,0 +1,30 @@
+// Tablet
+@media(max-width:1024px) {
+    .programas-main {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .programas-wrapper {
+            gap: 40px;
+            .programas-title {
+                text-align: center;
+            }
+            .programas-cards-container {
+                grid-template-columns: 1fr 1fr;
+                .programas-card {
+                    padding: 40px 8px 8px 8px;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media(max-width:743px) {
+    .programas-main {
+        .programas-wrapper {
+            .programas-cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

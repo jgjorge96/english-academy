@@ -1,0 +1,83 @@
+// Tablet
+@media(max-width: 1024px) {
+
+    // Hero
+    .en-hero {
+        padding: 40px 24px;
+        border-radius: 24px;
+    }
+
+    // Historia Section
+    .historia {
+        margin: 16px 0px;
+        padding: 40px 24px;
+        border-radius: 24px;
+        .historia-wrapper {
+            gap: 40px;
+            .historia-image-container{
+                max-width: 317px;
+                padding: 16px 16px 40px 16px;
+            }
+        }
+    }
+
+    // Filosofia Section
+    .filosofia {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .filosofia-wrapper {
+            gap: 24px;
+        }
+    }
+
+    // Camino Section
+    .camino {
+        padding: 24px;
+        border-radius: 24px;
+        margin-top: 16px;
+    }
+}
+
+// Mobile
+@media(max-width:743px) {
+    // Historia Section
+    .historia {
+        margin: 8px 0px;
+        .historia-wrapper {
+            width: -webkit-fill-available;
+            flex-direction: column;
+            .historia-image-container {
+                width: -webkit-fill-available;
+                max-width: 297px;
+                align-self: center;
+            }
+        }
+    }
+
+    // Filosofia Section
+    .filosofia {
+        .filosofia-wrapper {
+            align-items: center;
+            .filosofia-title-container {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    // Camino Section
+    .camino {
+        margin-top: 8px;
+        .camino-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            .camino-text-container {
+                text-align: left;
+            }
+            .camino-button {
+                align-self: flex-start;
+            }
+        }
+    }
+}

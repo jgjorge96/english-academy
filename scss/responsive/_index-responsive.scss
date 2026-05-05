@@ -1,0 +1,130 @@
+// Tablet
+@media(max-width: 1024px) {
+
+    // Hero Section 
+    .aprende-ingles {
+        padding: 40px 24px 24px 24px;
+        border-radius: 24px;
+        .aprende-ingles-wrapper{
+            gap: 40px;
+        }
+
+        .aprende-ingles-description {
+            gap: 24px;
+            .br-extra {
+                display: none;
+            }
+            .description-buttons-container{
+                .programs-button {
+                    padding: 16px 24px;
+                    font-size: 1rem;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    // Programs Section - En partial carousel 
+
+    // Como Funciona Section
+    .como-funciona {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .como-funciona-wrapper{
+            gap: 24px;
+        }
+    }
+
+    // Por qué elegirnos section
+    .porque-elegirnos{
+        margin: 16px 0px;
+        padding: 40px 24px;
+        border-radius: 24px;
+        .porque-elegirnos-wrapper {
+            gap: 24px;
+            .motivos-container {
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-areas: 
+                    "motivo-1 motivo-1 motivo-1 motivo-1 motivo-2 motivo-2 motivo-2 motivo-2"
+                    "motivo-3 motivo-3 motivo-3 motivo-3 motivo-4 motivo-4 motivo-4 motivo-4";
+                .motivos-card {
+                    gap: 20px;
+                    .motivos-img-container{
+                        img {
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Opiniones Section - En partial carousel 
+
+    //Dudas Section - En el partial accordeon
+}
+
+// Mobile
+@media(max-width: 743px) {
+
+    // Hero Section
+    .aprende-ingles {
+        padding: 24px;
+        .aprende-ingles-wrapper {
+            flex-direction: column;
+            gap: 16px;
+        }
+        .aprende-ingles-description {
+            padding-top: 0px;
+            gap: 48px;
+            .description-buttons-container {
+                .description-button {
+                    padding: 16px 48px;
+                    font-size: 1.125rem;
+                    line-height: 24px;
+                }
+                .programs-button {
+                    padding: 16px;
+                    font-size: 1.125rem;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    // Programs Section - En partial carousel 
+
+    // Como Funciona Section
+    .como-funciona {
+        margin: 8px 0px;
+        .como-funciona-wrapper {
+            .pasos-container {
+                .pasos-container-1, .pasos-container-2 {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .pasos-card-container {
+                        width: -webkit-fill-available;
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Por qué elegirnos section
+    .porque-elegirnos {
+        margin: 8px 0px;
+        .porque-elegirnos-wrapper {
+            .motivos-container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas: 
+                    "motivo-1 motivo-1 motivo-1 motivo-1"
+                    "motivo-2 motivo-2 motivo-2 motivo-2"
+                    "motivo-3 motivo-3 motivo-3 motivo-3"
+                    "motivo-4 motivo-4 motivo-4 motivo-4";
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 @use "./sobreEnglisNetwork";
 @use "./index";
 
@@ -36,28 +37,15 @@
 
                 .libro-details-title {
                     span {
-                        display: inline-block;
-                        border-radius: 80px;
+                        @include mixins.tag(#FFFFFF, variables.$Primary-Brand-200, #FFFFFF);
                         border: 1px solid #FFFFFF;
-                        padding: 12px;
-                        background-color: variables.$Primary-Brand-200;
-                        font-size: 0.875rem;
-                        color: #FFFFFF;
-                        font-weight: 500;
-                        line-height: 16px;
                     }
                     h1 {
-                        font-size: 4.5rem;
-                        font-weight: 700;
-                        line-height: 86px;
                         color: #FFFFFF;
                         margin-top: 8px;
                     }
                 }
                 p {
-                    font-size: 1.125rem;
-                    font-weight: 500;
-                    line-height: 28px;
                     color: #FFFFFF;
                     span {
                         font-weight: 700;
@@ -66,22 +54,13 @@
             }
         }
         .libro-details-contact {
-            display: inline-block;
+            @include mixins.contact-button(#FFFFFF, variables.$Primary-Brand-50, variables.$Primary-Brand-700);
             width: -webkit-fill-available;
-            max-width: 484px;
-            padding: 16px 48px;
-            border-radius: 80px;
-            background-color: #FFFFFF;
-            text-align: center;
-            font-size: 1.125rem;
-            font-weight: 500;
-            line-height: 28px;
-            color: variables.$Primary-Brand-700;
-            &:hover {
-                background-color: variables.$Primary-Brand-50;
-            }
         }
         // .libro-image-container abajo para extender
+    }
+    .libro-wrapper-mobile {
+        display: none;
     }
 }
 // Para extender
@@ -125,15 +104,7 @@
             align-items: center;
             gap: 8px;
             span {
-                display: inline-block;
-                padding: 12px;
-                border-radius: 80px;
-                border: 0.5px solid variables.$Secondary-Orange-500;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16px;
-                color: variables.$Secondary-Orange-900;
-                background-color: #FFFFFF;
+                @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900);
             }
         }
         .contenido-info-container {
@@ -192,6 +163,10 @@
                         padding: 12px;
                         border-radius: 8px;
                         background-color: variables.$Primary-Brand-700;
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                        }
                     }
                 }
                 .content-orange {
@@ -236,16 +211,9 @@
         align-items: center;
         .publico-tag {
             align-self: flex-end;
-            padding: 12px;
             margin: 0px 40px -30px 0;
             transform: rotate(2.69deg);
-            border-radius: 80px;
-            border: 0.5px solid variables.$Secondary-Orange-500;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 16px;
-            color: variables.$Secondary-Orange-900;
-            background-color: #FFFFFF;
+            @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900);
         }
         .publico-description-container{
             width: 100%;
@@ -255,6 +223,10 @@
             align-items: flex-start;
             gap: 80px;
             flex: 1 0 0;
+
+            .tag-mobile {
+                display: none;
+            }
 
             .publico-description {
                 max-width: 520px;
@@ -288,33 +260,15 @@
                     gap: 32px;
 
                     .publico-tipos {
-                        h4 {
-                            font-family: "Montserrat", sans-serif;
-                            font-size: 1.125rem;
-                            font-weight: 700;
-                            line-height: 28px;
-                            color: variables.$Neutrals-Neutral-900;
-                        }
-                        p {
-                            line-height: 24px;
+                        h5,p {
                             color: variables.$Neutrals-Neutral-900;
                         }
                     }
                 }
                 .publico-tipos-button {
+                    @include mixins.contact-button(variables.$Primary-Brand-700, variables.$Primary-Brand-800, #FFFFFF);
                     width: -webkit-fill-available;
-                    max-width: 464px;
-                    padding: 16px 48px;
-                    border-radius: 80px;
-                    background-color: variables.$Primary-Brand-700;
-                    font-size: 1.125rem;
-                    font-weight: 500;
-                    line-height: 24px;
-                    color: #FFFFFF;
-                    text-align: center;
-                    &:hover {
-                        background-color: variables.$Primary-Brand-800;
-                    }
+                    align-self: center;
                 }
             }
         }
@@ -353,23 +307,15 @@
 
                 .logros-card {
                     max-width: 316px;
-                    padding: 40px 16px 16px 16px;
-                    background-color: #FFFFFF;
-                    border-radius: 24px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-end;
-                    flex: 1 0 0;
-                    align-self: stretch;
+                    @include mixins.card-container(#FFFFFF, 40px);
                     .card-orange {
-                        height: 100%;
-                        min-height: 140px;
-                        padding: 24px;
-                        border-radius: 20px;
-                        background-color: variables.$Secondary-Orange-50;
-                        span {
-                            font-weight: 700;
+                        @include mixins.card-content(variables.$Secondary-Orange-50);
+                        gap: 0px;
+                        @media(min-width: 1400px) {
+                            min-height: 140px;
+                        }
+                        h5,p {
+                            color: variables.$Neutrals-Neutral-900;
                         }
                     }
                     .card-green {
@@ -389,15 +335,8 @@
             
             .logros-tag {
                 align-self: flex-end;
-                padding: 12px;
                 margin: -21px 40px 0px 0px;
-                border-radius: 80px;
-                border: 0.5px solid variables.$Secondary-Orange-500;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16px;
-                color: variables.$Secondary-Orange-900;
-                background-color: #FFFFFF;
+                @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900);
             }
         }
     }

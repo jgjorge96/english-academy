@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 @use "./index";
 
 .programas-main {
@@ -7,7 +8,6 @@
     background-position: center;
     background-size: 200%;
     @extend.programas;
-    margin: 0px 0px 24px 0px;
     background-color: variables.$Primary-Brand-700;
     .programas-wrapper {
         max-width: 1440px;
@@ -20,26 +20,14 @@
             flex-direction: column;
             gap: 8px;
             h1 {
-                font-size: 72px;
-                font-weight: 700;
-                line-height: 80px;
                 color: #FFFFFF;
             }
             p {
                 color: #FFFFFF;
-                font-size: 1.125rem;
-                line-height: 28px;
-                font-weight: 500;
             }
             span {
-                padding: 12px;
-                border-radius: 80px;
+                @include mixins.tag(#FFFFFF, variables.$Primary-Brand-200, #FFFFFF);
                 border: 1px solid #FFFFFF;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16px;
-                color: #FFFFFF;
-                background-color: variables.$Primary-Brand-200;
             }
         }
         .programas-cards-container {
@@ -51,29 +39,25 @@
                 .programas-card-flow {
                     background-color: variables.$Primary-Brand-50;
                     .programa-tag {
-                        background-color: #FFFFFF;
+                        @include mixins.tag(variables.$Primary-Brand-700, #FFFFFF, variables.$Primary-Brand-700);
                     }
                 }
                 .programas-card-kids {
                     background-color: variables.$Secondary-Green-200;
                     .programa-tag {
-                        border: 0.5px solid variables.$Secondary-Green-500;
-                        background-color: #FFFFFF;
+                        @include mixins.tag(variables.$Secondary-Green-500, #FFFFFF, variables.$Secondary-Green-900);
                     }
                 }
                 .programas-card-flash {
                     background-color: variables.$Primary-Accent-100;
                     .programa-tag {
-                        border: 0.5px solid variables.$Primary-Accent-700;
-                        background-color: #FFFFFF;
+                        @include mixins.tag(variables.$Primary-Accent-700, #FFFFFF, variables.$Primary-Brand-700);
                     }
                 }
                 .card-ielts {
                     background-color: variables.$Secondary-Orange-50;
                     .programa-tag {
-                        background-color: #FFFFFF;
-                        border: 0.5px solid variables.$Secondary-Orange-500;
-                        color: variables.$Secondary-Orange-900;
+                        @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900);
                     }
                     .programa-details-container {
                         .programa-details-wrapper {
@@ -82,35 +66,10 @@
                             }
                         }
                         .programa-details {
-                            background-color: variables.$Secondary-Orange-900;
-                            &:hover {
-                                background-color: variables.$Secondary-Orange-700;
-                            }
+                            @include mixins.info-button(variables.$Secondary-Orange-900, variables.$Secondary-Orange-700, #FFFFFF);
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-
-// Media Queries
-@media(min-width: 743px) and (max-width:1024px) {
-    .programas-main {
-        .programas-wrapper {
-            .programas-cards-container {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    }
-}
-
-@media(max-width:743px) {
-    .programas-main {
-        .programas-wrapper {
-            .programas-cards-container {
-                grid-template-columns: 1fr;
             }
         }
     }

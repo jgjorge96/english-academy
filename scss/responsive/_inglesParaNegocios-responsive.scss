@@ -1,0 +1,139 @@
+// Tablet
+@media(max-width: 1024px) {
+
+    // Hero Section
+    .negocios-hero {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .negocios-hero-wrapper {
+            gap: 40px;
+            .negocios-hero-details {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                .hero-details-title {
+                    align-items: center;
+                    text-align: center;
+                }
+                .hero-details-text {
+                    padding-top: 0px;
+                    max-width: none;
+                    text-align: center;
+                    .hero-details-contact {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Profesionales Section
+    .profesionales {
+        padding: 40px 24px;
+        border-radius: 24px;
+        .profesional-wrapper {
+            .tag-desktop {
+                display: none;
+            }
+            .profesional-info-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+                .tag-mobile {
+                    display: block;
+                    margin: 0px 40px -50px 0;
+                }
+                .profesional-info-text {
+                    max-width: none;
+                    gap: 8px;
+                    text-align: center;
+                }
+                .profesional-info-card {
+                    width: -webkit-fill-available;
+                    gap: 16px;
+                    .info-tipos-container{
+                        padding: 20px;
+                        gap: 24px;
+                    }
+                    .info-tipos-button {
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Que incluye Section
+    .incluye{
+        padding: 40px 24px;
+        border-radius: 24px;
+        .incluye-wrapper {
+            gap: 24px;
+            .incluye-info-container {
+                .incluye-info-text-container {
+                    padding: 24px;
+                    .incluye-info-button {
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+    }
+    .incluye-cards-container{
+        .incluye-card-wrapper {
+          .incluye-card {
+            span {
+                padding: 10px;
+                width: 20px;
+                height: 20px;
+            }
+          }  
+        }
+    }
+}
+
+// Mobile 
+@media(max-width: 743px) {
+
+    // Hero Section
+    .negocios-hero {
+        .negocios-hero-wrapper {
+            .negocios-hero-cards-container {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // Profesionales Section
+    .profesionales {
+        .profesional-wrapper {
+            .profesional-info-container {
+                .tag-mobile {
+                    margin: 0px 15px -55px 0;
+                }
+            }
+        }
+    }
+
+    // Que incluye Section
+    .incluye {
+        .incluye-wrapper {
+            align-items: center;
+            .incluye-title-container {
+                text-align: center;
+            }
+            .incluye-info-container {
+                .incluye-info-text-container {
+                    flex-direction: column;
+                    .incluye-info-button {
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }
+    }
+    .incluye-cards-container {
+        flex-direction: column;
+    }
+}

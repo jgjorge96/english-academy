@@ -71,6 +71,7 @@ nav {
   white-space: nowrap;
   flex-shrink: 0;
   line-height: 24px;
+  border: none;
   &:hover {
     background-color: variables.$Primary-Brand-800;
   }
@@ -147,6 +148,7 @@ nav {
   border-radius: 80px;
   padding: 14px 24px;
   cursor: pointer;
+  border: none;
 }
 
 /* ─── RESPONSIVE ─── */
@@ -180,7 +182,6 @@ nav {
     padding: 1.5rem 2rem;
   }
   .mobile-menu {
-    position: initial;
-    padding: 0;
+    justify-content: flex-start;
   }
 }

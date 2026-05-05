@@ -4,12 +4,18 @@
 
 // COMPONENTS
 @use "./components/nav";
-
 @use "./components/accordeon";
 @use "./components/index";
 @use "./components/programas";
 @use "./components/inglesParaNegocios";
 @use "./components/sobreEnglisNetwork";
 @use "./components/libro";
-
 @use "./components/footer";
+
+// Responsive
+@use "./responsive/carouseles-mobile";
+@use "./responsive/index-responsive";
+@use "./responsive/programas-responsive";
+@use "./responsive/inglesParaNegocios-responsive";
+@use "./responsive/sobreEnglishNetwork-responsive";
+@use "./responsive/libro-responsive";

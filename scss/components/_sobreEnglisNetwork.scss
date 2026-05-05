@@ -1,4 +1,5 @@
 @use "../utilities/variables";
+@use "../utilities/mixins";
 @use "./inglesParaNegocios";
 
 .en-hero {
@@ -21,14 +22,7 @@
         align-items: center;
         gap: 8px;
         span {
-            padding: 12px;
-            border-radius: 80px;
-            border: 0.5px solid variables.$Primary-Accent-100;
-            background-color: variables.$Primary-Accent-50;
-            font-size: 0.875rem;
-            font-weight: 500;
-            line-height: 16px;
-            color: variables.$Primary-Brand-700;
+            @include mixins.tag(variables.$Primary-Accent-100, variables.$Primary-Accent-50, variables.$Primary-Brand-700)
         }
         .en-title-container {
             display: flex;
@@ -37,16 +31,10 @@
             gap: 24px;
             text-align: center;
             h1 {
-                font-size: 4.5rem;
-                font-weight: 700;
-                line-height: 86px;
                 color: variables.$Primary-Brand-700;
             }
             p {
                 color: variables.$Primary-Brand-700;
-                font-size: 1.125rem;
-                font-weight: 500;
-                line-height: 28px;
                 align-self: center;
             }
         }
@@ -80,9 +68,6 @@
                 color: #FFFFFF;
             }
             p {
-                font-size: 1.125rem;
-                font-weight: 500;
-                line-height: 28px;
                 color: #FFFFFF;
                 span {
                     font-weight: 700;
@@ -132,14 +117,7 @@
             align-items: flex-start;
             gap: 8px;
             span {
-                padding: 12px;
-                background-color: #FFFFFF;
-                border-radius: 80px;
-                border: 0.5px solid variables.$Secondary-Orange-500;
-                font-size: 0.875rem;
-                font-weight: 500;
-                line-height: 16px;
-                color: variables.$Secondary-Orange-900;
+                @include mixins.tag(variables.$Secondary-Orange-500, #FFFFFF, variables.$Secondary-Orange-900)
             }
             h2 {
                 columns: variables.$Neutrals-Neutral-900;
@@ -173,31 +151,13 @@
             align-items: flex-start;
             gap: 8px;
             color: variables.$Primary-Brand-700;
-            h3 {
-                font-size: 1.5rem;
-                font-weight: 700;
-                line-height: 36px;
-            }
-            p {
-                font-size: 1.125rem;
-                font-weight: 500;
-                line-height: 28px;
-            }
         }
         .camino-button {
-            display: inline-block;
+            @include mixins.contact-button(variables.$Primary-Accent-700, variables.$Primary-Accent-100, variables.$Primary-Brand-700);
             width: -webkit-fill-available;
+            align-self: center;
             max-width: fit-content;
-            padding: 16px 48px;
-            border-radius: 80px;
             border: 2px solid variables.$Primary-Brand-700;
-            font-size: 1.125rem;
-            font-weight: 500;
-            line-height: 28px;
-            color: variables.$Primary-Brand-700;
-            &:hover {
-                background-color: variables.$Primary-Accent-100;
-            }
         }
     }
 }
