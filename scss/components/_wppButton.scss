@@ -1,0 +1,39 @@
+@use "../utilities/variables";
+
+.wpp-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 24px;
+    bottom: 80px;
+    z-index: 499;
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+    border-radius: 999px;
+    background-color: variables.$Primary-Brand-700;
+    box-shadow: 0 0 16px 0 rgba(24, 26, 30, 0.24);
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .wpp-button {
+        bottom: 40px;
+    }
+}
+@media(max-width: 743px) {
+    .wpp-button {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
